@@ -1,0 +1,27 @@
+
+<div class="row">
+    <div class="input-field col s6">
+      <input id="first_name2" type="text" class="validate" (input)="onChange()"  >
+      <label class="active" for="first_name2">Search</label>
+    </div>
+  </div>
+<table class="highlight">
+  <thead>
+  <tr>
+    <th (click)="onClick(1)">id</th>
+    <th (click)="onClick(2)">firstName </th>
+    <th (click)="onClick(3)">lastName</th>
+    <th (click)="onClick(4)">email</th>
+    <th (click)="onClick(5)">phone </th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let user of users ">
+    <tr (click)="onClickTr(user)"  >
+      <td>{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+    </tr>
+  </tbody>
+</table>
